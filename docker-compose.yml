@@ -1,0 +1,6 @@
+version: 2
+services:
+  scratch:
+    build: images/cloud9
+    ports:
+      - "22685:8080"
