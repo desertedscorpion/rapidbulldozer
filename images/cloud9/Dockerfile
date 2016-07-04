@@ -37,4 +37,5 @@ COPY 300-bin-pass.sh /opt/rapidbulldozer/init/bin
 COPY 900-bin-about.sh /opt/rapidbulldozer/init/bin
 VOLUME /opt/rapidbulldozer/gpg.secret.key
 VOLUME /opt/rapidbulldozer/gpg.owner.trust
+EXPOSE 8443
 CMD /opt/rapidbulldozer/scripts/sbin/init.sh
