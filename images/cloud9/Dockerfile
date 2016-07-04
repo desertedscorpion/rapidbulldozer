@@ -19,7 +19,6 @@ RUN \
     dnf update --assumeyes && \
     dnf install --assumeyes gnucash wget && \
     wget --output-document /opt/rapidbulldozer/gdrive https://docs.google.com/uc?id=0B3X9GlR6EmbnQ0FtZmJJUXEyRTA&export=download && \
-//    chmod u+x /opt/rapidbulldozer/gdrive && \
     dnf update --assumeyes && \
     dnf clean all
 COPY 100-sbin.sh /opt/rapidbulldozer/init/sbin
