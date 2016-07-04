@@ -16,4 +16,5 @@ Host ${ORIGIN_HOST}
 StrictHostKeyChecking no
 EOF
 ) &&
+chmod 0600 ${HOME}/.ssh/config &&
 true
