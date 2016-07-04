@@ -23,7 +23,7 @@ RUN \
     dnf clean all
 RUN \
     dnf update --assumeyes && \
-    dnf install --assumeyes xz && \
+    dnf install --assumeyes xz libpng12 && \
     VERSION=6.2.0 && \
     curl https://nodejs.org/dist/v${VERSION}/node-v${VERSION}-linux-x64.tar.xz | tar -xJ -C /opt/rapidbulldozer && \
     export PATH=/opt/rapidbulldozer/node-v${VERSION}-linux-x64/bin:${PATH} && \
