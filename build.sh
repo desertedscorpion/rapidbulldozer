@@ -1,4 +1,5 @@
 #!/bin/bash
 
-docker build --tag desertedscorpion/cloud9 images/cloud9 &&
+VERSION=${@} &&
+docker build --tag desertedscorpion/cloud9${VERSION} images/cloud9 &&
 true
