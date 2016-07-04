@@ -26,6 +26,7 @@ RUN \
     dnf install --assumeyes xz && \
     VERSION=6.2.0 && \
     curl https://nodejs.org/dist/v${VERSION}/node-v${VERSION}-linux-x64.tar.xz | tar -xJ -C /opt/rapidbulldozer && \
+    export PATH=/opt/rapidbulldozer/node-v${VERSION}-linux-x64/bin:${PATH} &&
     npm install -g npm jspm gulp yo && \
     dnf update --assumeyes && \
     dnf clean all
