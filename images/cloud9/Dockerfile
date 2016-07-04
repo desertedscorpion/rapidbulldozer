@@ -30,6 +30,12 @@ RUN \
     npm install -g npm jspm gulp yo && \
     dnf update --assumeyes && \
     dnf clean all
+RUN \
+    dnf update --assumeyes && \
+    dnf install --assumeyes nginx && \
+    rm --recursive --force /etc/nginix && \
+    dnf update --assumeyes && \
+    dnf clean all
 COPY 100-sbin.sh /opt/rapidbulldozer/init/sbin
 COPY 100-bin.sh /opt/rapidbulldozer/init/bin
 COPY 200-sbin-gpg.sh /opt/rapidbulldozer/init/sbin
