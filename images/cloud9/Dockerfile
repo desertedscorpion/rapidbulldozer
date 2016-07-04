@@ -45,7 +45,7 @@ COPY 200-sbin-gpg.sh /opt/rapidbulldozer/init/sbin
 COPY 200-bin-gpg.sh /opt/rapidbulldozer/init/bin
 COPY 300-bin-pass.sh /opt/rapidbulldozer/init/bin
 COPY 500-bin-node.sh /opt/rapidbulldozer/init/bin
-COPY 500-sbin-node.sh /opt/rapidbulldozer/init/bin
+COPY 500-sbin-node.sh /opt/rapidbulldozer/init/sbin
 COPY 510-bin-nginx.sh /opt/rapidbulldozer/init/bin
 COPY 900-bin-about.sh /opt/rapidbulldozer/init/bin
 VOLUME /opt/rapidbulldozer/gpg.secret.key
