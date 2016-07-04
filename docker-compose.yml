@@ -8,5 +8,7 @@ services:
       ID_RSA: ${ID_RSA}
       PASS_HOST: ${PASS_HOST}
       PASS_URL: ${PASS_URL}
+    volumes:
+      - ${WORKSPACE}:/var/workspace
     ports:
       - "22685:8080"
