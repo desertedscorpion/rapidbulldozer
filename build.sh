@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker build --tag desertedscorpion/cloud9 path/cloud9 &&
+docker build --tag desertedscorpion/cloud9 images/cloud9 &&
 true
