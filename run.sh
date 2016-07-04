@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=${@} &&
+VERSION=$(cat version) &&
 export GPG_SECRET_KEY="$(cat ${HOME}/.private/secret.key)" &&
 export GPG_OWNER_TRUST="$(cat ${HOME}/.private/owner.trust)" &&
 export ID_RSA="$(cat ${HOME}/.ssh/id_rsa)" &&
