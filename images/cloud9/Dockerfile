@@ -33,7 +33,7 @@ RUN \
 RUN \
     dnf update --assumeyes && \
     dnf install --assumeyes nginx && \
-    rm --recursive --force /etc/nginix && \
+    rm --recursive --force /etc/nginx && \
     mkdir /etc/nginx && \
     chown user:user /etc/nginx && \
     dnf update --assumeyes && \
