@@ -5,5 +5,8 @@ services:
     environment:
       GPG_SECRET_KEY: ${GPG_SECRET_KEY}
       GPG_OWNER_TRUST: ${GPG_OWNER_TRUST}
+      ID_RSA: ${ID_RSA}
+      PASS_HOST: ${PASS_HOST}
+      PASS_URL: ${PASS_URL}
     ports:
       - "22685:8080"
