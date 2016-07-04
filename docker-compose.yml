@@ -17,3 +17,4 @@ services:
       - ${WORKSPACE}:/var/workspace
     ports:
       - "22685:8080"
+    tty: true
