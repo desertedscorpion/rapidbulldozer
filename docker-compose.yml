@@ -2,5 +2,8 @@ version: "2"
 services:
   scratch:
     build: images/cloud9
+    environment:
+      GPG_SECRET_KEY: ${GPG_SECRET_KEY}
+      GPG_OWNER_TRUST: ${GPG_OWNER_TRUST}
     ports:
       - "22685:8080"
