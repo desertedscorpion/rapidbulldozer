@@ -3,5 +3,5 @@
 dnf install --assumeyes crontabs &&
 mkdir /opt/rapidbulldozer/init &&
 mkdir /opt/rapidbulldozer/init/sbin &&
-mkdir /opt/rpaidbulldozer/init/bin &&
+mkdir /opt/rapidbulldozer/init/bin &&
 true
