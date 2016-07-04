@@ -27,8 +27,6 @@ RUN \
     VERSION=6.2.0 && \
     curl https://nodejs.org/dist/v${VERSION}/node-v${VERSION}-linux-x64.tar.xz | tar -xJ -C /opt/rapidbulldozer && \
     export PATH=/opt/rapidbulldozer/node-v${VERSION}-linux-x64/bin:${PATH} && \
-    mkdir /etc/nginx && \
-    chown user:user /etc/nginx && \
     npm install -g npm jspm gulp yo && \
     dnf update --assumeyes && \
     dnf clean all
@@ -36,6 +34,8 @@ RUN \
     dnf update --assumeyes && \
     dnf install --assumeyes nginx && \
     rm --recursive --force /etc/nginix && \
+    mkdir /etc/nginx && \
+    chown user:user /etc/nginx && \
     dnf update --assumeyes && \
     dnf clean all
 COPY 100-sbin.sh /opt/rapidbulldozer/init/sbin
