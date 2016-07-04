@@ -13,4 +13,5 @@ RUN \
 COPY 100-sbin.sh /opt/rapidbulldozer/init/sbin
 COPY 100-bin.sh /opt/rapidbulldozer/init/bin
 VOLUME /opt/rapidbulldozer/gpg.secret.key
+VOLUME /opt/rapidbulldozer/gpg.owner.trust
 CMD /opt/rapidbulldozer/scripts/sbin/init.sh
