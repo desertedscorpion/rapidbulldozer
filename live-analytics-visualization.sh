@@ -24,6 +24,6 @@ docker run -it --rm \
     --env GPG_SECRET_KEY="${GPG_SECRET_KEY}" --env GPG_OWNER_TRUST="${GPG_OWNER_TRUST}" --env ID_RSA="${ID_RSA}" --env PASS_HOST="${PASS_HOST}" \
     --env PASS_URL="${PASS_URL}" --env CANONICAL_HOST="${CANONICAL_HOST}" --env ORIGIN_HOST="${ORIGIN_HOST}" --env CANONICAL_URL="${CANONICAL_URL}" \
     --env ORIGIN_URL="${ORIGIN_URL}" --env DISPLAY="${DISPLAY}" --env EMAIL="emory.merryman@gmail.com" --env NAME="Emory Merryman" \
-    --env LDAP_USERNAME="${LDAP_USERNAME}" --env LDAP_PASSWORD="${LDAP_PASSWORD}" --env LDAP_EMAIL="${LDAP_EMAIL" \
+    --env LDAP_USERNAME="${LDAP_USERNAME}" --env LDAP_PASSWORD="${LDAP_PASSWORD}" --env LDAP_EMAIL="${LDAP_EMAIL}" \
     -p ${CLOUD9_PORT}:8080 -p ${NGINX_PORT}:8443  --volume ${HOME}/.private/secret.key:/opt/rapidbulldozer/gpg.secret.key:ro desertedscorpion/cloud9:${VERSION}
 true
