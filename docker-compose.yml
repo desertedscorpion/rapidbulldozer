@@ -18,3 +18,4 @@ services:
     ports:
       - "22685:8080"
     tty: true
+    stdin_open: true
