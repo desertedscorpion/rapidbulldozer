@@ -10,6 +10,7 @@ install-cloud9.sh &&
 install-gpg.sh &&
 install-ssh.sh &&
 install-pass.sh &&
+install-parts.sh &&
 su --login user /opt/rapidbulldozer/scripts/bin/install.sh &&
 dnf update --assumeyes &&
 dnf clean all

@@ -5,4 +5,5 @@ mkdir /opt/rapidbulldozer/properties &&
 init-gpg.sh &&
 init-ssh.sh &&
 init-pass.sh &&
+init-parts.sh &&
 su --login user /opt/rapidbulldozer/scripts/bin/init.sh
