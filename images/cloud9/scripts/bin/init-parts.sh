@@ -1,4 +1,5 @@
 #!/bin/bash
 
-run-parts --exit-on-error -- /opt/rapidbulldozer/init/bin &&
+run-parts --test -- /opt/rapidbulldozer/init/bin &&
+run-parts -- /opt/rapidbulldozer/init/bin &&
 true
