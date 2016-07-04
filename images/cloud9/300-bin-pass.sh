@@ -8,4 +8,5 @@ pass git remote add origin "${PASS_URL}" &&
 pass git fetch origin master &&
 pass git checkout master &&
 pass git rebase origin/master &&
+ln --symbolic --force /opt/rapidbulldozer/scripts/bin/post-commit.sh ${HOME}/.password-store/.git/hooks/post-commit &&
 true
