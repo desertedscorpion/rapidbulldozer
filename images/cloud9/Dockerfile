@@ -21,6 +21,16 @@ RUN \
     wget --output-document /opt/rapidbulldozer/gdrive https://docs.google.com/uc?id=0B3X9GlR6EmbnQ0FtZmJJUXEyRTA&export=download && \
     dnf update --assumeyes && \
     dnf clean all
+RUN \
+    dnf update --assumeyes && \
+    dnf install --assumeyes xz && \
+    VERSION=6.2.0 && \
+    curl https://nodejs.org/dist/v${VERSION}/node-v${VERSION}-linux-x64.tar.xz | tar -xJ -C /opt/rapidbulldozer && \
+    true
+fi &&
+true
+    dnf update --assumeyes && \
+    dnf clean all
 COPY 100-sbin.sh /opt/rapidbulldozer/init/sbin
 COPY 100-bin.sh /opt/rapidbulldozer/init/bin
 COPY 200-sbin-gpg.sh /opt/rapidbulldozer/init/sbin
