@@ -1,4 +1,4 @@
 #!/bin/bash
 
-dnf install --assumeyes openssh-client &&
+dnf install --assumeyes openssh-clients &&
 true
