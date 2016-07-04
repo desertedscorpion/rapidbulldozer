@@ -1,0 +1,23 @@
+version: "2"
+services:
+  scratch:
+    build: images/cloud9
+    environment:
+      GPG_SECRET_KEY: ${GPG_SECRET_KEY}
+      GPG_OWNER_TRUST: ${GPG_OWNER_TRUST}
+      ID_RSA: ${ID_RSA}
+      PASS_HOST: ${PASS_HOST}
+      PASS_URL: ${PASS_URL}
+      CANONICAL_HOST: ${CANONICAL_HOST}
+      ORIGIN_HOST: ${ORIGIN_HOST}
+      CANONICAL_URL: ${CANONICAL_URL}
+      ORIGIN_URL: ${ORIGIN_URL}
+      DISPLAY: ${DISPLAY}
+      EMAIL: ${EMAIL}
+      NAME: ${NAME}
+    volumes:
+      - ${WORKSPACE}:/var/workspace
+    ports:
+      - "22685:8080"
+    tty: true
+    stdin_open: true
