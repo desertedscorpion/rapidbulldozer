@@ -5,3 +5,4 @@ EMAIL="${EMAIL}"
 NAME="${NAME}"
 EOF
 ) &&
+true
