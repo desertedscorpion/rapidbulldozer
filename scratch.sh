@@ -10,7 +10,9 @@ export CANONICAL_HOST=github.com &&
 export ORIGIN_HOST=github.com &&
 export CANONICAL_URL=git@github.com:desertedscorpion/rapidbulldozer.gitdocker &&
 export ORIGIN_URL=git@github.com:desertedscorpion/rapidbulldozer.gitdocker &&
-export DISPLAY=$(ifconfig | grep "inet.*netmask" | grep -v "127.0.0.1" | cut -f2 -d " "):0
+export DISPLAY=$(ifconfig | grep "inet.*netmask" | grep -v "127.0.0.1" | cut -f2 -d " "):0 &&
+export EMAIL=emory.merryman@gmail.com &&
+export NAME="Emory Merryman" &&
 docker-compose build scratch &&
 docker-compose up scratch &&
 true

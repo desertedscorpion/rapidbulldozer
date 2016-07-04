@@ -13,6 +13,8 @@ services:
       CANONICAL_URL: ${CANONICAL_URL}
       ORIGIN_URL: ${ORIGIN_URL}
       DISPLAY: ${DISPLAY}
+      EMAIL: ${EMAIL}
+      NAME: ${NAME}
     volumes:
       - ${WORKSPACE}:/var/workspace
     ports:
