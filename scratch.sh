@@ -10,6 +10,7 @@ export CANONICAL_HOST=${1} &&
 export ORIGIN_HOST=${2} &&
 export CANONICAL_URL=${3} &&
 export ORIGIN_URL=${3} &&
+export DISPLAY=$(ifconfig | grep "inet.*netmask" | grep -v "127.0.0.1" | cut -f2 -d " "):0
 docker-compose build scratch &&
 docker-compose up scratch &&
 true

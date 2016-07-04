@@ -12,6 +12,7 @@ services:
       ORIGIN_HOST: ${ORIGIN_HOST}
       CANONICAL_URL: ${CANONICAL_URL}
       ORIGIN_URL: ${ORIGIN_URL}
+      DISPLAY: ${DISPLAY}
     volumes:
       - ${WORKSPACE}:/var/workspace
     ports:
