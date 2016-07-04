@@ -12,6 +12,7 @@ RUN \
     dnf clean all
 COPY 100-sbin.sh /opt/rapidbulldozer/init/sbin
 COPY 100-bin.sh /opt/rapidbulldozer/init/bin
+COPY 200-gpg.sh /opt/rapidbulldozer/init/sbin
 VOLUME /opt/rapidbulldozer/gpg.secret.key
 VOLUME /opt/rapidbulldozer/gpg.owner.trust
 CMD /opt/rapidbulldozer/scripts/sbin/init.sh
