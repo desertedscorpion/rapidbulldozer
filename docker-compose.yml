@@ -8,6 +8,10 @@ services:
       ID_RSA: ${ID_RSA}
       PASS_HOST: ${PASS_HOST}
       PASS_URL: ${PASS_URL}
+      CANONICAL_HOST: ${CANONICAL_HOST}
+      ORIGIN_HOST: ${ORIGIN_HOST}
+      CANONICAL_URL: ${CANONICAL_URL}
+      ORIGIN_URL: ${ORIGIN_URL}
     volumes:
       - ${WORKSPACE}:/var/workspace
     ports:

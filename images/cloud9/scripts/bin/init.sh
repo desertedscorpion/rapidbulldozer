@@ -1,6 +1,7 @@
 #!/bin/bash
 
 export PATH=/opt/rapidbulldozer/scripts/bin:${PATH} &&
+init-workspace.sh &&
 init-cloud9.sh &&
 init-gpg.sh &&
 init-ssh.sh &&

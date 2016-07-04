@@ -8,6 +8,12 @@ source /opt/rapidbulldozer/properties/ssh.properties &&
 (cat > ${HOME}/.ssh/config <<EOF
 Host ${PASS_HOST}
 StrictHostKeyChecking no
+
+Host ${CANONICAL_HOST}
+StrictHostKeyChecking no
+
+Host ${ORIGIN_HOST}
+StrictHostKeyChecking no
 EOF
 ) &&
 true
