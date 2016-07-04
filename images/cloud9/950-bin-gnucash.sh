@@ -9,8 +9,8 @@ cd $(mktemp -d) &&
     cd $(mktemp -d) &&
     read -p "FILE ID:  " FILE_ID &&
     gdrive download "${FILE_ID}" &&
-    gpg2 *.gpg &&
-    gunzip *.gz &&
-    tar --extract --file *.tar &&
+    gpg2 gnucash-${TSTAMP}.tar.gz.gpg &&
+    gunzip gnucash-${TSTAMP}.tar.gz &&
+    tar --extract --file gnucash-${TSTAMP}.tar &&
     diff -qr gnucash ${HOME}/gnucash &&
     true
