@@ -1,4 +1,4 @@
 #!/bin/bash
 
-git checkout -b scatch-$(uuidgen) &&
+git checkout -b scratch-$(uuidgen) &&
 true
