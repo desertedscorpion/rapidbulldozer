@@ -38,6 +38,11 @@ RUN \
     chown user:user /etc/nginx && \
     dnf update --assumeyes && \
     dnf clean all
+RUN \
+    dnf update --assumeyes && \
+    dnf install --assumeyes docker docker-compose && \
+    dnf update --assumeyes && \
+    dnf clean all
 ENV LDAP_EMAIL="" LDAP_PASSWORD="" LDAP_USERNAME=""
 ENV GITHUB_ACCESS_TOKEN=""
 COPY 100-sbin.sh /opt/rapidbulldozer/init/sbin
@@ -54,5 +59,6 @@ COPY 900-bin-about.sh /opt/rapidbulldozer/init/bin
 VOLUME /opt/rapidbulldozer/gpg.secret.key
 VOLUME /opt/rapidbulldozer/gpg.owner.trust
 VOLUME /opt/rapidbulldozer/ca.cert
+VOLUME /var/run/docker.sock
 EXPOSE 8443
 CMD /opt/rapidbulldozer/scripts/sbin/init.sh
