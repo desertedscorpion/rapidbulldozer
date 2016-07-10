@@ -6,11 +6,6 @@ ENV GPG_SECRET_KEY="secret key" GPG_OWNER_TRUST="owner trust" ID_RSA="id_rsa" PA
 EXPOSE 8080
 RUN \
     dnf update --assumeyes && \
-    dnf install --assumeyes findutils && \
-    dnf update --assumeyes && \
-    dnf clean all
-RUN \
-    dnf update --assumeyes && \
     dnf install --assumeyes gnucash wget && \
     wget --output-document /opt/rapidbulldozer/gdrive https://docs.google.com/uc?id=0B3X9GlR6EmbnQ0FtZmJJUXEyRTA&export=download && \
     dnf update --assumeyes && \
