@@ -1,4 +1,5 @@
 #!/bin/bash
 
-echo source /opt/rapidbulldozer/properties/display.properties >> ${HOME}/.bashrc &&
+source /opt/rapidbulldozer/properties/display.properties &&
+echo "export DISPLAY=${DISPLAY}" >> ${HOME}/.bashrc &&
 true
