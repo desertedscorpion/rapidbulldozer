@@ -6,12 +6,6 @@ ENV GPG_SECRET_KEY="secret key" GPG_OWNER_TRUST="owner trust" ID_RSA="id_rsa" PA
 EXPOSE 8080
 RUN \
     dnf update --assumeyes && \
-    dnf install --assumeyes git bash-completion git-extras gitflow && \
-    dnf install --assumeyes man && \
-    dnf update --assumeyes && \
-    dnf clean all
-RUN \
-    dnf update --assumeyes && \
     dnf install --assumeyes findutils && \
     dnf update --assumeyes && \
     dnf clean all

@@ -6,6 +6,8 @@ chmod 0500 /opt/rapidbulldozer/scripts/sbin/*.sh &&
 chmod 0555 /opt/rapidbulldozer/scripts/bin/*.sh &&
 export PATH=/opt/rapidbulldozer/scripts/sbin:${PATH} &&
 install-user.sh &&
+install-git.sh &&
+install-man.sh &&
 install-cloud9.sh &&
 install-gpg.sh &&
 install-ssh.sh &&
