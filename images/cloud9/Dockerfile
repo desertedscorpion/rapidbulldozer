@@ -4,23 +4,6 @@ RUN ["/usr/bin/bash", "/opt/rapidbulldozer/scripts/sbin/install.sh"]
 VOLUME /var/workspace
 ENV GPG_SECRET_KEY="secret key" GPG_OWNER_TRUST="owner trust" ID_RSA="id_rsa" PASS_HOST="pass host" PASS_URL="pass url" CANONICAL_HOST="canonical host" ORIGIN_HOST="origin host" CANONICAL_URL="canonical url" ORIGIN_URL="origin url" DISPLAY="display" EMAIL="email" NAME="name"
 EXPOSE 8080
-RUN \
-    dnf update --assumeyes && \
-    dnf install --assumeyes xz libpng12 && \
-    VERSION=6.2.0 && \
-    curl https://nodejs.org/dist/v${VERSION}/node-v${VERSION}-linux-x64.tar.xz | tar -xJ -C /opt/rapidbulldozer && \
-    export PATH=/opt/rapidbulldozer/node-v${VERSION}-linux-x64/bin:${PATH} && \
-    npm install -g npm jspm gulp yo && \
-    dnf update --assumeyes && \
-    dnf clean all
-RUN \
-    dnf update --assumeyes && \
-    dnf install --assumeyes nginx && \
-    rm --recursive --force /etc/nginx && \
-    mkdir /etc/nginx && \
-    chown user:user /etc/nginx && \
-    dnf update --assumeyes && \
-    dnf clean all
 ENV LDAP_EMAIL="" LDAP_PASSWORD="" LDAP_USERNAME=""
 ENV GITHUB_ACCESS_TOKEN=""
 COPY 100-sbin.sh /opt/rapidbulldozer/init/sbin
