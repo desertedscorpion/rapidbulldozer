@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo PATH=/opt/rapidbulldozer/node-v6.2.0-linux-x64/bin:\${PATH} >> ${HOME}/.bashrc &&
+echo "export PATH=/opt/rapidbulldozer/node-v6.2.0-linux-x64/bin:\${PATH}" >> ${HOME}/.bashrc &&
 PATH=/opt/rapidbulldozer/node-v6.2.0-linux-x64/bin:${PATH} &&
 npm set registry https://npm.363-283.io &&
 npm set cafile /opt/rapidbulldozer/ca.crt &&
