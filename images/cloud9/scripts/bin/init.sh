@@ -3,6 +3,7 @@
 export PATH=/opt/rapidbulldozer/scripts/bin:${PATH} &&
 init-bin.sh &&
 init-workspace.sh &&
+init-display.sh &&
 init-cloud9.sh &&
 init-gpg.sh &&
 init-ssh.sh &&
