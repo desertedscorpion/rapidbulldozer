@@ -13,7 +13,7 @@ export CANONICAL_HOST=gitlab.363-283.io &&
 export ORIGIN_HOST=gitlab.363-283.io &&
 export CANONICAL_URL=ssh://git@gitlab.363-283.io:2252/cte/object-drive-ui.git &&
 export ORIGIN_URL=ssh://git@gitlab.363-283.io:2252/emory.merryman/object-drive-ui.git &&
-export DISPLAY=$(ifconfig | grep "inet.*netmask" | grep -v "127.0.0.1" | cut -f2 -d " "):0 &&
+export DISPLAY= 10.1.10.76:0&&
 export EMAIL=emory.merryman@gmail.com &&
 export NAME="Emory Merryman" &&
 source ${HOME}/.private/ldap.properties &&
